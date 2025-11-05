@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.dahbi.calculatrice.CalculatriceTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-11-05T15:47:55.717Z" hostname="hiba-Swift-SF314-59" time="0.003">
+  <properties/>
+  <testcase name="testSum()" classname="com.dahbi.calculatrice.CalculatriceTest" time="0.003"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
