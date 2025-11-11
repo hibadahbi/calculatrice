@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="9.3">
+<file name="/home/hiba/atelier/calculatrice/src/main/java/com/dahbi/calculatrice/CalculatriceApplication.java">
+</file>
+<file name="/home/hiba/atelier/calculatrice/src/main/java/com/dahbi/calculatrice/CalculatriceController.java">
+</file>
+<file name="/home/hiba/atelier/calculatrice/src/main/java/com/dahbi/calculatrice/Calculatrice.java">
+</file>
+</checkstyle>
