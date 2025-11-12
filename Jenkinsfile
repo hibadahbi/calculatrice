@@ -45,15 +45,16 @@ pipeline {
                 '''
             }
         }
-        stage("Analyse statique du code") {
-      steps {
-           sh "./gradlew checkstyleMain"
-           publishHTML (target: [
-           reportDir: 'build/reports/checkstyle/',
-           reportFiles: 'main.html',
-           reportName: "Checkstyle Report"
-])
-           }
+
+        stage('Analyse statique du code') {
+            steps {
+                sh './gradlew checkstyleMain'
+                publishHTML(target: [
+                    reportDir: 'build/reports/checkstyle/',
+                    reportFiles: 'main.html',
+                    reportName: 'Checkstyle Report'
+                ])
+            }
         }
     }
 
@@ -67,13 +68,17 @@ pipeline {
                 exclusionPattern: ''
             )
 
-            // Publication du rapport HTML
+            // Publication du rapport HTML JaCoCo
             publishHTML(target: [
                 reportDir: 'build/reports/jacoco/test/html',
                 reportFiles: 'index.html',
                 reportName: 'Rapport JaCoCo HTML'
             ])
+
+            
+            mail to: 'hibadb992@gmail.com',
+                 subject: "Notification : build terminé pour ${currentBuild.fullDisplayName}",
+                 body: " Votre build est terminé avec succès. Consultez les résultats ici : ${env.BUILD_URL}"
         }
     }
 }
-
